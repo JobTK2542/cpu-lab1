@@ -181,8 +181,10 @@ func command_io1x() {
 	if p == "" {
 		return
 	}
-	if cpu1 == "" {
+	if cpu1 == "" && (cpu2 == "" || cpu2 != "") {
 		cpu1 = p
+	} else if cpu2 == "" && cpu1 != "" {
+		cpu2 = p
 	} else {
 		insertQueue(ready, p)
 	}
@@ -193,8 +195,10 @@ func command_io2x() {
 	if p == "" {
 		return
 	}
-	if cpu1 == "" {
+	if cpu1 == "" && (cpu2 == "" || cpu2 != "") {
 		cpu1 = p
+	} else if cpu2 == "" && cpu1 != "" {
+		cpu2 = p
 	} else {
 		insertQueue(ready, p)
 	}
@@ -205,8 +209,10 @@ func command_io3x() {
 	if p == "" {
 		return
 	}
-	if cpu1 == "" {
+	if cpu1 == "" && (cpu2 == "" || cpu2 != "") {
 		cpu1 = p
+	} else if cpu2 == "" && cpu1 != "" {
+		cpu2 = p
 	} else {
 		insertQueue(ready, p)
 	}
@@ -217,8 +223,10 @@ func command_io4x() {
 	if p == "" {
 		return
 	}
-	if cpu1 == "" {
+	if cpu1 == "" && (cpu2 == "" || cpu2 != "") {
 		cpu1 = p
+	} else if cpu2 == "" && cpu1 != "" {
+		cpu2 = p
 	} else {
 		insertQueue(ready, p)
 	}
